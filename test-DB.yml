@@ -1,7 +1,6 @@
 ---
 - name: Test database connection
-  hosts: database_clients
-  gather_facts: false
+  hosts: all
 
   tasks:
     - name: Show database configuration
