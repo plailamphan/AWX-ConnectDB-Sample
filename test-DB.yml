@@ -10,16 +10,5 @@
           - "DB Port: {{ db_port }}"
           - "DB Name: {{ db_name }}"
           - "DB User: {{ db_user }}"
+          - "DB Password: {{ db_password }}"
 
-    - name: Test MySQL connection
-      community.mysql.mysql_info:
-        login_host: "{{ db_host }}"
-        login_port: "{{ db_port }}"
-        login_user: "{{ db_user }}"
-        login_password: "{{ db_password }}"
-      register: db_result
-      no_log: true
-
-    - name: Database connection successful
-      ansible.builtin.debug:
-        msg: "Successfully connected to {{ db_name }}"
