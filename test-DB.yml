@@ -4,7 +4,7 @@
 
   tasks:
     - name: Show database configuration
-      ansible.builtin.debug:
+      debug:
         msg:
           - "DB Host: {{ db_host }}"
           - "DB Port: {{ db_port }}"
